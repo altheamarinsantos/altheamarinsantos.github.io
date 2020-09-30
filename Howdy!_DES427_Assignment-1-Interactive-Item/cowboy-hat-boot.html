@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>HOWDY!</title>
+<script src="p5.min.js"></script>
+<script src = https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js></script>
+
+<script>
+
+let posX = 0;
+let posY = 0;
+let circleNum = 1;
+
+function preload(){
+cowboyhat = loadImage('https://altheamarinsantos.github.io/HAT%20(1).png');
+boots = loadImage('https://altheamarinsantos.github.io/BOOTS%20(2)%20(1).png');
+howdypartner = loadImage('https://altheamarinsantos.github.io/HOWDY%20PARTNER.png');
+}
+
+function setup(){
+createCanvas(600, 600);
+background('#8c96ff');
+image(howdypartner, -85, 10);
+}
+
+            function mouseClicked(){
+                posX = random(-300, 50 - 1);
+        posY = random(-200, 200 -1);
+
+        if (circleNum >= 1 && circleNum <=15){
+            image(cowboyhat, posX, posY);
+        } else {
+            image(boots, posX, posY);
+        }
+       
+        circleNum++;
+            }
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
